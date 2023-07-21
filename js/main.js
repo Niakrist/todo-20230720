@@ -48,11 +48,11 @@ function makeTsak(e) {
     if (parentNode.matches('.ok')) {
       parentNode.classList.add('task__item-green');
       btnEdit.disabled = true;
-      e.target.textContent = 'Act';
+      e.target.textContent = 'OFF';
     } else {
       parentNode.classList.remove('task__item-green');
       btnEdit.disabled = false;
-      e.target.textContent = 'Ok';
+      e.target.textContent = 'ON';
     }
     saveHTMLtoLS();
   }
@@ -92,7 +92,7 @@ function addTask(e) {
       <div class="item-task__text">${formText.value}</div>
       <div class="buttons-group">
         <button class="item-task__edit" data-action="edit">Edit</button>
-        <button class="item-task__ok" data-action="ok">Ok</button>
+        <button class="item-task__ok" data-action="ok">ON</button>
         <button class="item-task__del">Del</button>
       </div>
       </li>`
